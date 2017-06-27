@@ -1,5 +1,7 @@
 import React from "react";
 import {AgGridReact} from "ag-grid-react";
+import StockJson from './StockData';
+import StockSchema from './FieldSchema';
 
 class Component1 extends React.Component {
   constructor(props) {
@@ -19,30 +21,27 @@ class Component1 extends React.Component {
   }
 
   createColumnDefs() {
-    return [
-      {headerName: "Make", field: "make"},
-      {headerName: "Model", field: "model"},
-      {headerName: "Price", field: "price"}
-    ];
+    return StockSchema;
   }
 
   createRowData() {
-    return [
-      {make: "Toyota", model: "Celica", price: 35000},
-      {make: "Ford", model: "Mondeo", price: 32000},
-      {make: "Porsche", model: "Boxter", price: 72000}
-    ];
+    const displayData = StockJson.map(function (stock) {
+      stock.actual_arrived_date = new Date(stock.actual_arrived_date);
+      stock.estimated_arrived_date = new Date(stock.estimated_arrived_date);
+      return stock;
+    });
+    return displayData;
   }
 
   render() {
     let containerStyle = {
       height: 115,
-      width: 500
+      width: 1500
     };
 
     return (
       <div style={containerStyle} className="ag-fresh">
-        <h1>Simple ag-Grid React Example</h1>
+        <h1>标准件库存表</h1>
         <AgGridReact
           // properties
           columnDefs={this.state.columnDefs}

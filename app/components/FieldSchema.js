@@ -1,0 +1,16 @@
+export default [
+  {headerName: "序号", field: "index"},
+  {headerName: "强度", field: "strength"},
+  {headerName: "规格", field: "specifications"},
+  {headerName: "数量", field: "quantity"},
+  {headerName: "单位", field: "unit"},
+  {headerName: "标准市场指导价", field: "msrp"},
+  {headerName: "实际市场指导价", field: "total_msrp_include_vat"},
+  {headerName: "估计成本", field: "estimated_cost"},
+  {headerName: "库龄", field: "stock_age"},
+  {headerName: "预计到达日期", field: "estimated_arrived_date"},
+  {headerName: "实际到达日期", field: "actual_arrived_date"},
+  {headerName: "标准件位置", field: "location"},
+  {headerName: "供应商账户", field: "supplier_account"},
+  {headerName: "物流状态描述", field: "logistic_status_definition"},
+];

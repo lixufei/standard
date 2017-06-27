@@ -1,5 +1,6 @@
 var webpack = require('webpack');//引入Webpack模块供我们调用，这里只能使用ES5语法，使用ES6语法会报错
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+var path = require('path');
 
 module.exports = {
   devtool: 'eval-source-map',
@@ -23,8 +24,9 @@ module.exports = {
         }
       },
       {
-        test: /\.(png|jpe?g|gif|svg|woff|woff2|ttf|eot|ico)$/,
-        loader: 'file?name=[path]/[name].[ext]'
+        test: /\.(jpg|png)$/,
+        loader: 'url-loader?limit=25000',
+        include: path.join(__dirname, 'client')
       }
     ]
   },

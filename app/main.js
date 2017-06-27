@@ -4,16 +4,17 @@ import ReactDom from 'react-dom';
 import "ag-grid-root/dist/styles/ag-grid.css";
 import "ag-grid-root/dist/styles/theme-fresh.css";
 
-import Component1 from './components/Component1.jsx';
+import StockTableComponent from './components/StockTable.jsx';
 
+//render stock table
 ReactDom.render(
-  <Component1 />,
+  <StockTableComponent />,
   document.getElementById('content')
 );
 
 // document.addEventListener('DOMContentLoaded', () => {
 //   render(
-//     <Component1/>,
+//     <StockTableComponent/>,
 //     document.querySelector('#content')
 //   );
 // });

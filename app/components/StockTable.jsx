@@ -3,7 +3,7 @@ import {AgGridReact} from "ag-grid-react";
 import StockJson from './StockData';
 import StockSchema from './FieldSchema';
 
-class Component1 extends React.Component {
+class StockTable extends React.Component {
   constructor(props) {
     super(props);
 
@@ -55,4 +55,4 @@ class Component1 extends React.Component {
   }
 };
 
-export default Component1;
+export default StockTable;
